@@ -9,12 +9,6 @@ openshift_cluster_content:
     params: "{{ playbook_dir }}/params/nexus"
     tags:
     - nexus
-  - name: "gitlab"
-    namespace: "{{ ci_cd_namespace }}"
-    template: "{{ playbook_dir }}/templates/gitlab.yml"
-    params: "{{ playbook_dir }}/params/gitlab"
-    tags:
-    - gitlab
   - name: "jenkins"
     namespace: "{{ ci_cd_namespace }}"
     template: "{{ playbook_dir }}/templates/jenkins.yml"
